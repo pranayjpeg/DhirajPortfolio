@@ -22,6 +22,22 @@ const Navbar = () => {
     };
   }, []);
 
+  // Control body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      // Prevent scrolling on body when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling when menu is closed
+      document.body.style.overflow = "";
+    }
+
+    // Cleanup function to ensure scroll is re-enabled when component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
