@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 
 const Contact = () => {
-    const { theme } = useTheme();
-    
+  const { theme } = useTheme();
+
   return (
     <section id="contact" className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -82,10 +82,10 @@ const Contact = () => {
               <div>
                 <h3 className="font-medium">Email</h3>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:vernekarpratik26.pv@gmail.com"
                   className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                 >
-                  hello@example.com
+                  vernekarpratik26.pv@gmail.com
                 </a>
               </div>
             </div>
@@ -98,24 +98,19 @@ const Contact = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-5 h-5 text-black dark:text-white"
+                  className="w-6 h-6 text-black dark:text-white"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    d="M2.25 4.5A2.25 2.25 0 014.5 2.25h3a.75.75 0 01.75.75v2.8a.75.75 0 01-.24.55l-1.8 1.6a14.25 14.25 0 006.84 6.84l1.6-1.8a.75.75 0 01.55-.24h2.8a.75.75 0 01.75.75v3a2.25 2.25 0 01-2.25 2.25A18.75 18.75 0 012.25 4.5z"
                   />
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium">Location</h3>
+                <h3 className="font-medium">Mobile No</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  San Francisco, CA
+                  (+91) 9535330160
                 </p>
               </div>
             </div>
@@ -132,9 +127,15 @@ const Contact = () => {
             </h3>
             <div className="flex gap-4">
               {[
-                { name: "GitHub", href: "https://github.com" },
-                { name: "LinkedIn", href: "https://linkedin.com" },
-                { name: "Instagram", href: "https://instagram.com" },
+                { name: "GitHub", href: "https://github.com/pratikvernekar" },
+                {
+                  name: "LinkedIn",
+                  href: "https://www.linkedin.com/in/pratik-vernekar-7b036a170/",
+                },
+                {
+                  name: "Instagram",
+                  href: "https://www.instagram.com/pratik._.vernekar/?next=%2F",
+                },
               ].map((social) => (
                 <a
                   key={social.name}

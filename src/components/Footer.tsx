@@ -140,12 +140,12 @@ const Footer = () => {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                hello@example.com
+                vernekarpratik26.pv@gmail.com | (+91) 9535330160{" "}
               </li>
             </ul>
             {/* View Resume Button */}
             <a
-              href="/resume.pdf" // Update this with your actual resume link
+              href="https://drive.google.com/file/d/1QuIVgRCOdJnUJmhDgE2RadACxlKKYQek/view?usp=drive_link" // Update this with your actual resume link
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-block px-4 mt-2 py-2 rounded-lg font-medium transition-colors ${
