@@ -58,8 +58,8 @@ export const skills: Skill[] = [
   { name: "React Native", icon: "📱" },
   { name: "JavaScript", icon: "JS" },
   { name: "TypeScript", icon: "TS" },
-  { name: "HTML", icon: "HTML" },
-  { name: "CSS", icon: "CSS" },
   { name: "Redux", icon: "⚙️" },
   { name: "Git", icon: "🔄" },
+  { name: "HTML", icon: "HTML" },
+  { name: "CSS", icon: "CSS" },
 ];

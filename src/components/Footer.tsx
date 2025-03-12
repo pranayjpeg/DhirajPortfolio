@@ -1,9 +1,10 @@
-
+import { useTheme } from "@/hooks/useTheme";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const { theme } = useTheme();
   const year = new Date().getFullYear();
-  
+
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -15,12 +16,23 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           <div>
-            <div className="text-2xl font-semibold mb-4 text-gradient">MM</div>
-            <p className="text-gray-600 mb-6 max-w-xs">
-              Creating beautiful, responsive, and user-friendly digital experiences
-              for web and mobile platforms.
+            <div
+              className={`text-2xl font-semibold mb-4 ${
+                theme === "dark" ? "text-white" : "text-black"
+              }`}
+            >
+              PV
+            </div>
+            <p
+              className={`mb-6 max-w-xs ${
+                theme === "dark" ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
+              Creating beautiful, responsive, and user-friendly digital
+              experiences for web and mobile platforms.
             </p>
-            <div className="flex gap-4">
+
+            {/* <div className="flex gap-4">
               {[
                 { name: "GitHub", href: "https://github.com" },
                 { name: "LinkedIn", href: "https://linkedin.com" },
@@ -31,7 +43,11 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-black/10 hover:bg-black/20 rounded-full flex items-center justify-center transition-colors"
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                    theme === "dark"
+                      ? "bg-white/10 hover:bg-white/20 text-white"
+                      : "bg-black/10 hover:bg-black/20 text-black"
+                  }`}
                   aria-label={social.name}
                 >
                   {social.name === "GitHub" && (
@@ -50,7 +66,7 @@ const Footer = () => {
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
                   )}
-                  
+
                   {social.name === "LinkedIn" && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +84,7 @@ const Footer = () => {
                       <circle cx="4" cy="4" r="2" />
                     </svg>
                   )}
-                  
+
                   {social.name === "Instagram" && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -88,9 +104,9 @@ const Footer = () => {
                   )}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -103,7 +119,11 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-600 hover:text-black transition-colors"
+                    className={`transition-colors ${
+                      theme === "dark"
+                        ? "text-gray-300 hover:text-white"
+                        : "text-gray-600 hover:text-black"
+                    }`}
                   >
                     {link.name}
                   </a>
@@ -111,18 +131,36 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600">hello@example.com</li>
-              <li className="text-gray-600">San Francisco, CA</li>
+              <li
+                className={`transition-colors ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                hello@example.com
+              </li>
             </ul>
+            {/* View Resume Button */}
+            <a
+              href="/resume.pdf" // Update this with your actual resume link
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block px-4 mt-2 py-2 rounded-lg font-medium transition-colors ${
+                theme === "dark"
+                  ? "bg-white text-black hover:bg-gray-300"
+                  : "bg-black text-white hover:bg-gray-800"
+              }`}
+            >
+              View Resume
+            </a>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-          <p>© {year} Minimal Mastery. All rights reserved.</p>
+          {/* <p>© {year} Minimal Mastery. All rights reserved.</p> */}
         </div>
       </div>
     </motion.footer>

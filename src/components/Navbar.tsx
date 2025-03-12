@@ -58,7 +58,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#hero" className={`text-2xl font-semibold ${theme === 'dark' ? 'text-gradient-dark' : 'text-gradient'}`}>
-          MM
+          PV
         </a>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
