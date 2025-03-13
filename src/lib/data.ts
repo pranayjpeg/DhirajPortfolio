@@ -1,3 +1,4 @@
+import { Code, Smartphone, Codepen, Type, Boxes, GitBranch, FileCode, PaintBucket, LucideIcon } from "lucide-react";
 
 export type Project = {
   id: number;
@@ -7,11 +8,6 @@ export type Project = {
   imageUrl: string;
   liveUrl?: string;
   githubUrl?: string;
-};
-
-export type Skill = {
-  name: string;
-  icon: string;
 };
 
 export const projects: Project[] = [
@@ -53,13 +49,20 @@ export const projects: Project[] = [
   },
 ];
 
+
+type Skill = {
+  name: string;
+  icon: LucideIcon; // <-- Correct type for Lucide Icons
+};
+
 export const skills: Skill[] = [
-  { name: "React", icon: "⚛️" },
-  { name: "React Native", icon: "📱" },
-  { name: "JavaScript", icon: "JS" },
-  { name: "TypeScript", icon: "TS" },
-  { name: "Redux", icon: "⚙️" },
-  { name: "Git", icon: "🔄" },
-  { name: "HTML", icon: "HTML" },
-  { name: "CSS", icon: "CSS" },
-];
+  { name: "React", icon: Code },
+  { name: "React Native", icon: Smartphone },
+  { name: "JavaScript", icon: Codepen },
+  { name: "TypeScript", icon: Type },
+  { name: "Redux", icon: Boxes },
+  { name: "Git", icon: GitBranch },
+  { name: "HTML", icon: FileCode },
+  { name: "CSS", icon: PaintBucket}
+]
+

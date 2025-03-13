@@ -111,15 +111,10 @@ const About = () => {
                   className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm border border-black/5 dark:border-white/10 hover:shadow-md transition-shadow"
                 >
                   <div className="w-12 h-12 mx-auto bg-black/5 dark:bg-white/10 rounded-lg flex items-center justify-center mb-3">
-                    {skill.icon.length > 2 ? (
-                      <span className="text-sm font-semibold text-gray-800 dark:text-gray-300">
-                        {skill.icon}
-                      </span>
-                    ) : (
-                      <span className="text-xl text-gray-900 dark:text-gray-100">
-                        {skill.icon}
-                      </span>
-                    )}
+                    <skill.icon
+                      size={24}
+                      className="text-gray-900 dark:text-gray-100"
+                    />
                   </div>
                   <h3 className="font-medium text-gray-900 dark:text-gray-200">
                     {skill.name}
@@ -140,13 +135,13 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "REST API",
                   "Responsive Design",
-                  "Testing",
                   "Performance Optimization",
-                  "Firebase",
                   "Push Notifications",
                   "Google Maps",
+                  "REST API",
+                  "Firebase",
+                  "Testing",
                 ].map((skill) => (
                   <span
                     key={skill}

@@ -49,7 +49,7 @@ const Projects = () => {
             Featured Projects
           </motion.h2>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -58,7 +58,7 @@ const Projects = () => {
           >
             Here's a selection of my recent work showcasing my skills in developing
             responsive, user-friendly web and mobile applications.
-          </motion.p>
+          </motion.p> */}
         </motion.div>
 
         {/* Tabs Section */}
@@ -94,7 +94,7 @@ const Projects = () => {
         </div>
 
         {/* GitHub Link */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -123,7 +123,7 @@ const Projects = () => {
               />
             </svg>
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
