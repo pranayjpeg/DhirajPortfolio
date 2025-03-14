@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/lib/data";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
@@ -10,6 +10,15 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % project.imageUrl.length);
+    }, 1500); // Change image every 1.5s
+
+    return () => clearInterval(interval);
+  }, [project.imageUrl]);
 
   return (
     <motion.div
@@ -41,10 +50,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     }`}
         >
           <motion.img
-            src={project.imageUrl}
+            src={project.imageUrl[currentIndex]}
             alt="Project Mockup"
             className="w-auto h-full object-cover scale-110 shadow-lg"
-            animate={{ scale: isHovered ? 1.05 : 1 }}
+            animate={{ opacity: [0, 1], scale: [0.95, 1] }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           />
         </div>
