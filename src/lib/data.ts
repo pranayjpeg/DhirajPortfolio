@@ -1,17 +1,3 @@
-import {
-  Code,
-  Smartphone,
-  Codepen,
-  Type,
-  Boxes,
-  GitBranch,
-  FileCode,
-  PaintBucket,
-  LucideIcon,
-} from "lucide-react";
-import mockupImage from "../assets/md (1).png";
-import mdLogo from "../assets/mdLogo.png";
-import apLogo from "../assets/apLogo.png";
 import md1 from "../assets/mdImages/1.png";
 import md2 from "../assets/mdImages/2.png";
 import md3 from "../assets/mdImages/3.png";
@@ -93,7 +79,7 @@ export const projects: Project[] = [
     description:
       "AyurPrana+ is a streaming platform offering inspirational content on Ayurveda, Yoga, and Herbalism. It features documentaries, films, and wellness practices to uplift the spirit. Users can explore mindfulness, breathwork, and traditional healing remedies. Available on iOS and Android, it helps reconnect with nature.",
     tags: ["React Native", "Typescript", "Redux", "FireBase", "Video Player"],
-    imageUrl: [ap1, ap2, ap3, ap4, ap5, ap6, ap7, ap8, ap9],
+    imageUrl: [ap1, ap9, ap4, ap8, ap3, ap2, ap7, ap5, ap6],
     liveUrlG:
       "https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN",
     liveUrlA: "https://apps.apple.com/in/app/ayurprana/id6469480400",
@@ -124,18 +110,27 @@ export const projects: Project[] = [
   // },
 ];
 
+import react from "../assets/React.png";
+import CSS3 from "../assets/CSS3.png";
+import HTML5 from "../assets/HTML5.png";
+import JavaScript from "../assets/JavaScript.png";
+import TypeScript from "../assets/TypeScript.png";
+import Git from "../assets/Git.png";
+import Redux from "../assets/Redux.png";
+import science from "../assets/science.png";
+
 type Skill = {
   name: string;
-  icon: LucideIcon; // <-- Correct type for Lucide Icons
+  icon: string; // <-- Correct type for Lucide Icons
 };
 
 export const skills: Skill[] = [
-  { name: "React", icon: Code },
-  { name: "React Native", icon: Smartphone },
-  { name: "JavaScript", icon: Codepen },
-  { name: "TypeScript", icon: Type },
-  { name: "Redux", icon: Boxes },
-  { name: "Git", icon: GitBranch },
-  { name: "HTML", icon: FileCode },
-  { name: "CSS", icon: PaintBucket },
+  { name: "React", icon: react },
+  { name: "React Native", icon: science },
+  { name: "JavaScript", icon: JavaScript },
+  { name: "TypeScript", icon: TypeScript },
+  { name: "Redux", icon: Redux },
+  { name: "Git", icon: Git },
+  { name: "HTML", icon: HTML5 },
+  { name: "CSS", icon: CSS3 },
 ];

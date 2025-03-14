@@ -112,12 +112,14 @@ const About = () => {
                          rounded-lg p-4 text-center shadow-md border border-black/10 
                          dark:border-white/10 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 mx-auto bg-white/30 dark:bg-white/10 rounded-lg flex items-center justify-center mb-3">
-                    <skill.icon
-                      size={24}
-                      className="text-gray-900 dark:text-gray-100"
+                  <div className="w-12 h-12 mx-auto bg-black/10 dark:bg-white/30 rounded-lg flex items-center justify-center mb-3">
+                    <img
+                      src={skill.icon} // Assuming skill.icon is an image URL
+                      alt={skill.name}
+                      className="w-8 h-8 object-contain"
                     />
                   </div>
+
                   <h3 className="font-medium text-gray-900 dark:text-gray-200">
                     {skill.name}
                   </h3>
