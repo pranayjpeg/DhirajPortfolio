@@ -43,24 +43,41 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <motion.img
             src={project.imageUrl}
             alt="Project Mockup"
-            className="w-auto h-full object-contain scale-110 shadow-lg"
-            animate={{ scale: isHovered ? 1.1 : 1 }}
+            className="w-auto h-full object-cover scale-110 shadow-lg"
+            animate={{ scale: isHovered ? 1.05 : 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           />
         </div>
 
         {/* Project Details */}
         <div className="p-6 space-y-4">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+          <h3
+            className={`text-2xl font-bold dark:text-white ${
+              project.title === "MDHEALTHTRAK"
+                ? "text-[#1187d5]"
+                : project.title === "AyurPrana+"
+                ? "text-[#d58728]"
+                : "text-gray-900"
+            }`}
+          >
             {project.title}
           </h3>
-          <p className="text-gray-700 dark:text-gray-300 text-base">
+
+          <p
+            className={`text-base dark:text-gray-300 ${
+              project.title === "MDHEALTHTRAK"
+                ? "text-[#1187d5]"
+                : project.title === "AyurPrana+"
+                ? "text-[#d58728]"
+                : "text-gray-700"
+            }`}
+          >
             {project.description}
           </p>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
-            {project.tags.slice(0, 3).map((tag) => (
+            {project.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
@@ -68,16 +85,20 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 {tag}
               </span>
             ))}
-            {project.tags.length > 3 && (
+            {project.tags.length > 4 && (
               <span className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
-                +{project.tags.length - 3}
+                +{project.tags.length - 4}
               </span>
             )}
           </div>
 
           {/* Links */}
           <div className="flex space-x-6 mt-4">
-            {project.type === "app" ? (
+            {project.title === "MDHEALTHTRAK" ? (
+              <span className="text-red-600 font-semibold text-base">
+                App not available in store yet!
+              </span>
+            ) : project.type === "app" ? (
               <>
                 <a
                   href={project.liveUrlA}
@@ -111,6 +132,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 </a>
               )
             )}
+
             {project.githubUrl && project.type === "site" && (
               <a
                 href={project.githubUrl}

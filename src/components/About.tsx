@@ -108,9 +108,11 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-sm border border-black/5 dark:border-white/10 hover:shadow-md transition-shadow"
+                  className="bg-gradient-to-r from-[#a370f0] to-[#5aa3f8] dark:from-[#3b4863] dark:to-[#4b5563]
+                         rounded-lg p-4 text-center shadow-md border border-black/10 
+                         dark:border-white/10 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 mx-auto bg-black/5 dark:bg-white/10 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 mx-auto bg-white/30 dark:bg-white/10 rounded-lg flex items-center justify-center mb-3">
                     <skill.icon
                       size={24}
                       className="text-gray-900 dark:text-gray-100"

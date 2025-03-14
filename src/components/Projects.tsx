@@ -19,7 +19,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="py-24 px-6 relative overflow-hidden">
+    <section id="projects" className="pt-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(0,0,0,0.02)_0%,rgba(0,0,0,0.06)_50%)] dark:bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.06)_50%)]" />
       </div>
@@ -129,9 +129,9 @@ const Projects = () => {
         </motion.div> */}
       </div>
 
-      <div className="flex items-center justify-center my-5 py-0 bg-transparent">
+      <div className="flex items-center justify-center my-6 py-0 bg-transparent px-4">
         <motion.h1
-          className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+          className="text-1xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >

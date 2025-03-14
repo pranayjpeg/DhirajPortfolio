@@ -20,7 +20,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`inline-block px-3 py-1 rounded-full text-sm mb-4 ${
+            className={`inline-block px-3 py-1 rounded-full text-m mb-4 ${
               theme === "dark"
                 ? "bg-white/10 text-white"
                 : "bg-black/5 text-black"
