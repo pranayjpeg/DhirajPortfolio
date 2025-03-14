@@ -2,10 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 import ProjectCard from "./ProjectCard";
+import { useTheme } from "@/hooks/useTheme";
 
 const tabs = ["All", "Web", "Mobile"];
 
 const Projects = () => {
+  const { theme, toggleTheme } = useTheme();
+
   const [activeTab, setActiveTab] = useState("All");
 
   const filteredProjects = projects.filter((project) => {
@@ -62,7 +65,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Tabs Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -84,7 +87,7 @@ const Projects = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -124,6 +127,16 @@ const Projects = () => {
             </svg>
           </a>
         </motion.div> */}
+      </div>
+
+      <div className="flex items-center justify-center my-5 py-0 bg-transparent">
+        <motion.h1
+          className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          New Projects Coming Soon
+        </motion.h1>
       </div>
     </section>
   );

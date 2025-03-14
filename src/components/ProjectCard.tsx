@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/lib/data";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 type ProjectCardProps = {
   project: Project;
@@ -25,27 +26,35 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className="relative overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white/40 via-white/20 to-white/5 dark:from-gray-900/40 dark:via-gray-900/20 dark:to-gray-900/5 border border-gray-300/20 dark:border-gray-700/20"
-        style={{ willChange: "transform" }} // Helps prevent text blurring
+        className="relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-white/40 via-white/20 to-white/5 dark:from-gray-900/40 dark:via-gray-900/20 dark:to-gray-900/5 border border-gray-300/20 dark:border-gray-700/20 p-4"
+        style={{ willChange: "transform" }}
       >
-        {/* Project Image */}
-        <div className="relative h-48 overflow-hidden rounded-t-2xl">
+        {/* Enlarged Mockup Image */}
+        <div
+          className={`relative h-80 overflow-hidden rounded-2xl flex items-center justify-center 
+    ${
+      project.title === "MDHEALTHTRAK"
+        ? "bg-gradient-to-br from-[#08578c] to-[#1187d5]"
+        : project.title === "AyurPrana+"
+        ? "bg-[#d58728]"
+        : "bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 border border-gray-400 dark:border-gray-800"
+    }`}
+        >
           <motion.img
             src={project.imageUrl}
-            alt={project.title}
-            className="w-full h-full object-cover"
-            animate={{ scale: isHovered ? 1.05 : 1 }}
+            alt="Project Mockup"
+            className="w-auto h-full object-contain scale-110 shadow-lg"
+            animate={{ scale: isHovered ? 1.1 : 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
-        {/* Project Details (Separate from Hover Effect) */}
+        {/* Project Details */}
         <div className="p-6 space-y-4">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
             {project.title}
           </h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm line-clamp-2">
+          <p className="text-gray-700 dark:text-gray-300 text-base">
             {project.description}
           </p>
 
@@ -54,37 +63,60 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
+                className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
               >
                 {tag}
               </span>
             ))}
             {project.tags.length > 3 && (
-              <span className="px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
+              <span className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
                 +{project.tags.length - 3}
               </span>
             )}
           </div>
 
           {/* Links */}
-          <div className="flex space-x-4 mt-3">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
-              >
-                <span>View Live</span>
-                🔗
-              </a>
+          <div className="flex space-x-6 mt-4">
+            {project.type === "app" ? (
+              <>
+                <a
+                  href={project.liveUrlA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
+                >
+                  <FaApple size={20} />
+                  <span>App Store</span>
+                </a>
+                <a
+                  href={project.liveUrlG}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
+                >
+                  <FaGooglePlay size={20} />
+                  <span>Google Play</span>
+                </a>
+              </>
+            ) : (
+              project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
+                >
+                  <span>View Live</span>
+                  🔗
+                </a>
+              )
             )}
-            {project.githubUrl && (
+            {project.githubUrl && project.type === "site" && (
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
+                className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
               >
                 <span>GitHub</span>
                 🛠️
