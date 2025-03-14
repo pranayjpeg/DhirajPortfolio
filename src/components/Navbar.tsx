@@ -97,7 +97,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed top-0 right-0 w-2/4 h-full bg-white dark:bg-gray-900 shadow-xl p-8 md:hidden z-50 rounded-l-lg"
+              className="fixed top-0 right-0 w-3/5 h-full bg-white dark:bg-gray-900 shadow-xl p-8 md:hidden z-50 rounded-l-lg"
             >
               <div className="flex justify-end">
                 <button
