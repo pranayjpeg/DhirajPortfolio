@@ -105,7 +105,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <div className="flex space-x-6 mt-4">
             {project.title === "MDHEALTHTRAK" ? (
               <span className="text-red-600 font-semibold text-base">
-                App isn't available in the store yet!
+                App not available in store yet!
               </span>
             ) : project.type === "app" ? (
               <>
