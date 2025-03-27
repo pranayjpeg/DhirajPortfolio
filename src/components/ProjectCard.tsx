@@ -103,7 +103,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
           {/* Links */}
           <div className="flex space-x-6 mt-4">
-            {project.title === "MDHEALTHTRAK" ? (
+            {project.title === "xyz" ? (
               <span className="text-red-600 font-semibold text-base">
                 App not available in store yet!
               </span>

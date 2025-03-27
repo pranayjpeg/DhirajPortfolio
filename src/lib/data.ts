@@ -69,8 +69,8 @@ export const projects: Project[] = [
     ],
     type: "app",
     liveUrlG:
-      "https://play.google.com/store/apps/details?id=com.liveayurprana.prod&hl=en_IN",
-    liveUrlA: "https://apps.apple.com/in/app/ayurprana/id6469480400",
+      "https://play.google.com/store/apps/details?id=com.mdht&hl=en_IN",
+    liveUrlA: "https://apps.apple.com/in/app/mdhealthtrak/id6743380687",
     githubUrl: "",
   },
   {
