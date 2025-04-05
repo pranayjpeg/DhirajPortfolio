@@ -145,9 +145,7 @@ const Footer = () => {
             </ul>
             {/* View Resume Button */}
             <a
-              href="https://drive.google.com/file/d/1QuIVgRCOdJnUJmhDgE2RadACxlKKYQek/view?usp=drive_link" // Update this with your actual resume link
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://drive.google.com/uc?export=download&id=1QuIVgRCOdJnUJmhDgE2RadACxlKKYQek"
               className={`inline-block px-4 mt-2 py-2 rounded-lg font-medium transition-colors ${
                 theme === "dark"
                   ? "bg-white text-black hover:bg-gray-300"

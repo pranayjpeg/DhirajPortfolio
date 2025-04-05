@@ -97,24 +97,26 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5 }} // Removed delay
               viewport={{ once: true }}
               className="grid grid-cols-2 sm:grid-cols-3 gap-6"
             >
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <motion.div
                   key={skill.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 * index }}
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ duration: 0.1 }} // Removed per-item delay
                   viewport={{ once: true }}
                   className="bg-gradient-to-r from-[#a370f0] to-[#5aa3f8] dark:from-[#3b4863] dark:to-[#4b5563]
-                         rounded-lg p-4 text-center shadow-md border border-black/10 
-                         dark:border-white/10 hover:shadow-lg transition-shadow"
+                 rounded-lg p-4 text-center shadow-md border border-black/10 
+                 dark:border-white/10 transition-all duration-300 ease-in-out
+                 hover:shadow-[0_4px_20px_rgba(163,112,240,0.6)]"
                 >
                   <div className="w-12 h-12 mx-auto bg-black/10 dark:bg-white/30 rounded-lg flex items-center justify-center mb-3">
                     <img
-                      src={skill.icon} // Assuming skill.icon is an image URL
+                      src={skill.icon}
                       alt={skill.name}
                       className="w-8 h-8 object-contain"
                     />
@@ -130,7 +132,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0, delay: 0.1 }}
               viewport={{ once: true }}
               className="mt-12"
             >
