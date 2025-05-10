@@ -41,7 +41,8 @@ const About = () => {
               viewport={{ once: true }}
               className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              Passionate about creating impactful technology solutions
+              Driven to optimize financial processes and deliver impactful
+              solutions.
             </motion.h2>
 
             <div className="space-y-4">
@@ -52,9 +53,11 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 dark:text-gray-300"
               >
-                I'm a frontend developer specializing in React and React Native,
-                with a strong focus on building scalable and high-performance
-                web and mobile applications.
+                An experienced Senior Accountant and Finance & Logistics
+                Executive with over 15 years of expertise across the Middle East
+                and India. Skilled in financial reporting, budgeting, auditing,
+                and logistics coordination, with a proven ability to streamline
+                operations and support strategic decision-making.
               </motion.p>
 
               <motion.p
@@ -64,9 +67,12 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 dark:text-gray-300"
               >
-                With hands-on experience in UI development, API integration, and
-                optimizing system performance, I create intuitive and visually
-                appealing interfaces that enhance user experiences.
+                Proficient in ERP systems, managing full-cycle accounting, and
+                collaborating across departments to enhance financial
+                transparency and control. Adaptable to multicultural
+                environments and committed to delivering accuracy, compliance,
+                and business efficiency. Known for driving cost-saving
+                initiatives and optimizing financial processes.
               </motion.p>
 
               <motion.p
@@ -76,9 +82,10 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 dark:text-gray-300"
               >
-                Beyond coding, I enjoy exploring new design trends and
-                experimenting with emerging technologies to stay ahead in the
-                ever-evolving world of development.
+                Passionate about continuous professional growth and implementing
+                innovative solutions to meet business challenges. Strong focus
+                on fostering effective communication and building lasting
+                relationships across teams.
               </motion.p>
             </div>
           </div>
@@ -141,13 +148,13 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Responsive Design",
-                  "Performance Optimization",
-                  "Push Notifications",
-                  "Google Maps",
-                  "REST API",
-                  "Firebase",
-                  "Testing",
+                  "Financial Reporting & Management",
+                  "Budget Preparation & Forecasting",
+                  "Financial Statement Analysis",
+                  "Accounts Payable & Receivable Management",
+                  "Cost Accounting & Job Costing",
+                  "Payroll Management",
+                  "Cash Flow Management",
                 ].map((skill) => (
                   <span
                     key={skill}

@@ -21,15 +21,15 @@ const Footer = () => {
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
-              PV
+              DR
             </div>
             <p
               className={`mb-6 max-w-xs ${
                 theme === "dark" ? "text-gray-300" : "text-gray-600"
               }`}
             >
-              Creating beautiful, responsive, and user-friendly digital
-              experiences for web and mobile platforms.
+              Delivering accurate financial insights and efficient logistics
+              solutions to drive business success.
             </p>
 
             {/* <div className="flex gap-4">

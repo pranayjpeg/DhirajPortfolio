@@ -50,9 +50,8 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-gray-600 dark:text-gray-300 mb-8"
           >
-            I'm currently available for freelance projects, collaborations, or
-            full-time positions. Feel free to reach out if you're interested in
-            working together or just want to say hello.
+            Open to freelance projects, collaborations, or full-time roles. Feel
+            free to reach out to connect or say hello.
           </motion.p>
 
           <motion.div

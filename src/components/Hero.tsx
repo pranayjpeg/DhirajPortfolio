@@ -26,7 +26,7 @@ const Hero = () => {
                 : "bg-black/5 text-black"
             }`}
           >
-            Frontend Developer | React and React Native
+            Senior Accountant | Finance and Logistics Executive
           </motion.span>
 
           <motion.h1
@@ -41,7 +41,7 @@ const Hero = () => {
           >
             Hi, I'm
             <br />
-            Pratik Vernekar
+            Dhiraj Revankar
           </motion.h1>
 
           <motion.p
@@ -52,8 +52,9 @@ const Hero = () => {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            A frontend developer skilled in React and React Native. Focused on
-            crafting clean & user-friendly experiences.
+            Experienced in finance, accounting, and logistics. Skilled in
+            managing budgets, reports, and streamlining operations. Focused on
+            accuracy, efficiency, and strategic support for business growth.
           </motion.p>
 
           <motion.div
