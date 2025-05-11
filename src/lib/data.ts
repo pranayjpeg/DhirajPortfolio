@@ -1,7 +1,8 @@
 import md1 from "../assets/tg.png";
-import ap1 from "../assets/eq.png";
+import ap1 from "../assets/aa.png";
 import ispta from "../assets/ispta.png";
-import rr from "../assets/rr.png";
+import rr from "../assets/rr1.png";
+import ss from "../assets/ss.png";
 
 export type Project = {
   id: number;
@@ -99,6 +100,23 @@ export const projects: any[] = [
     type: "app",
   },
   {
+    id: 5,
+    title: "Sunlight Interior & Exhibitions",
+    description:
+      [
+        "Worked with accounts payables and receivables for the sister company of ELECTAR QATAR WLL.",
+        "Handled daily transactions, ensured accuracy in account reconciliations.",
+        "Processed and reviewed invoices for payment, ensuring timely execution.",
+        "Managed outstanding receivables and followed up with clients to ensure payments were collected on time.",
+        "Provided support in financial record-keeping and monthly reporting tasks during the short-term role."
+      ],
+    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
+    imageUrl: [ss],
+    liveUrl: "https://liveayurprana.com/",
+    loc: "Bahrain",
+    type: "site",
+  },
+  {
     id: 3,
     title: "Shraddha Ispat",
     description:
@@ -163,23 +181,7 @@ export const projects: any[] = [
     loc: "Goa India",
     type: "site",
   },
-  // {
-  //   id: 5,
-  //   title: "Sunlight Interior & Exhibitions",
-  //   description:
-  //     [
-  //       "Worked with accounts payables and receivables for the sister company of ELECTAR QATAR WLL.",
-  //       "Handled daily transactions, ensured accuracy in account reconciliations.",
-  //       "Processed and reviewed invoices for payment, ensuring timely execution.",
-  //       "Managed outstanding receivables and followed up with clients to ensure payments were collected on time.",
-  //       "Provided support in financial record-keeping and monthly reporting tasks during the short-term role."
-  //     ],
-  //   tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-  //   imageUrl: [ispta],
-  //   liveUrl: "https://liveayurprana.com/",
-  //   loc: "Bahrain",
-  //   type: "site",
-  // },
+
 ];
 
 import react from "../assets/sap.png";
