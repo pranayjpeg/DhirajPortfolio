@@ -8,10 +8,9 @@ type ProjectCardProps = {
   index: number;
 };
 
-const ProjectCard = ({ project, index }: ProjectCardProps) => {
+const ProjectCard = ({ project, index }: any) => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   return (
     <motion.div
@@ -32,20 +31,11 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         style={{ willChange: "transform" }}
       >
         {/* Enlarged Mockup Image */}
-        <div
-          className={`relative h-80 overflow-hidden rounded-2xl flex items-center justify-center 
-    ${
-      project.title === "MDHEALTHTRAK"
-        ? "bg-gradient-to-br from-[#08578c] to-[#1187d5]"
-        : project.title === "AyurPrana+"
-        ? "bg-[#d58728]"
-        : "bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 border border-gray-400 dark:border-gray-800"
-    }`}
-        >
+        <div className="relative h-80 overflow-hidden rounded-2xl flex items-center justify-center bg-white">
           <motion.img
             src={project.imageUrl[currentIndex]}
             alt="Project Mockup"
-            className="w-auto h-auto object-fit scale-110 shadow-lg"
+            className="max-h-full max-w-full object-contain"
             animate={{ opacity: [0, 1], scale: [0.95, 1] }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           />
@@ -55,28 +45,32 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         <div className="p-6 space-y-4">
           <h3
             className={`text-2xl font-bold dark:text-white ${
-              project.title === "MDHEALTHTRAK"
-                ? "text-[#1187d5]"
-                : project.title === "AyurPrana+"
-                ? "text-[#d58728]"
-                : "text-gray-900"
+              // project.title === "MDHEALTHTRAK"
+              // ? "text-[#1187d5]"
+              // : project.title === "AyurPrana+"
+              // ? "text-[#d58728]"
+              "text-[#1187d5]"
             }`}
           >
             {project.title}
           </h3>
-
-          <p
-            className={`text-base dark:text-gray-300 ${
-              project.title === "MDHEALTHTRAK"
-                ? "text-[#1187d5]"
-                : project.title === "AyurPrana+"
-                ? "text-[#d58728]"
-                : "text-gray-700"
+          <span
+            className={`text-1xl font-bold dark:text-white ${
+              // project.title === "MDHEALTHTRAK"
+              // ? "text-[#1187d5]"
+              // : project.title === "AyurPrana+"
+              // ? "text-[#d58728]"
+              "text-[#1187d5]"
             }`}
           >
-            {project.description}
-          </p>
+            {project.loc}
+          </span>
 
+          <ul className="list-disc pl-5 text-base dark:text-gray-300 text-[#1187d5] space-y-1">
+            {project?.description?.map((point, idx):any => (
+              <li key={idx}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </motion.div>

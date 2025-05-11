@@ -131,14 +131,13 @@ const Contact = () => {
             </h3>
             <div className="flex gap-4">
               {[
-                { name: "GitHub", href: "https://github.com/pratikvernekar" },
                 {
                   name: "LinkedIn",
-                  href: "https://www.linkedin.com/in/pratik-vernekar-7b036a170/",
+                  href: "https://www.linkedin.com/in/dhiraj-revankar-473a9321/",
                 },
                 {
                   name: "Instagram",
-                  href: "https://www.instagram.com/pratik._.vernekar/?next=%2F",
+                  href: "https://www.instagram.com/dhirajrevankar?igsh=MWMwZjd4b2Z4bmRy",
                 },
               ].map((social) => (
                 <a
