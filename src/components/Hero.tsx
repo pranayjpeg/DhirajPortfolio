@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpeg";
+import profile from "../assets/profile.png";
 import { useTheme } from "@/hooks/useTheme";
 
 const Hero = () => {

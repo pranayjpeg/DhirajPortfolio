@@ -12,13 +12,6 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % project.imageUrl.length);
-    }, 1500); // Change image every 1.5s
-
-    return () => clearInterval(interval);
-  }, [project.imageUrl]);
 
   return (
     <motion.div
@@ -52,7 +45,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <motion.img
             src={project.imageUrl[currentIndex]}
             alt="Project Mockup"
-            className="w-auto h-full object-cover scale-110 shadow-lg"
+            className="w-auto h-auto object-fit scale-110 shadow-lg"
             animate={{ opacity: [0, 1], scale: [0.95, 1] }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           />
@@ -84,76 +77,6 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.description}
           </p>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
-            {project.tags.slice(0, 4).map((tag) => (
-              <span
-                key={tag}
-                className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
-              >
-                {tag}
-              </span>
-            ))}
-            {project.tags.length > 4 && (
-              <span className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
-                +{project.tags.length - 4}
-              </span>
-            )}
-          </div>
-
-          {/* Links */}
-          <div className="flex space-x-6 mt-4">
-            {project.title === "xyz" ? (
-              <span className="text-red-600 font-semibold text-base">
-                App not available in store yet!
-              </span>
-            ) : project.type === "app" ? (
-              <>
-                <a
-                  href={project.liveUrlA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
-                >
-                  <FaApple size={20} />
-                  <span>App Store</span>
-                </a>
-                <a
-                  href={project.liveUrlG}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
-                >
-                  <FaGooglePlay size={20} />
-                  <span>Google Play</span>
-                </a>
-              </>
-            ) : (
-              project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
-                >
-                  <span>View Live</span>
-                  🔗
-                </a>
-              )
-            )}
-
-            {project.githubUrl && project.type === "site" && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-base font-medium text-gray-900 dark:text-white hover:scale-105 transition-transform"
-              >
-                <span>GitHub</span>
-                🛠️
-              </a>
-            )}
-          </div>
         </div>
       </div>
     </motion.div>

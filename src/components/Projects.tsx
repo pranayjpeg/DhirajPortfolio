@@ -49,7 +49,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-4 text-gradient dark:text-white"
           >
-            Featured Projects
+            Projects
           </motion.h2>
 
           {/* <motion.p
@@ -130,13 +130,13 @@ const Projects = () => {
       </div>
 
       <div className="flex items-center justify-center my-6 py-0 bg-transparent px-4">
-        <motion.h1
+        {/* <motion.h1
           className="text-1xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
           New Projects Coming Soon
-        </motion.h1>
+        </motion.h1> */}
       </div>
     </section>
   );

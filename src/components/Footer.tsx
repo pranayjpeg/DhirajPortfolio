@@ -140,12 +140,12 @@ const Footer = () => {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                vernekarpratik26.pv@gmail.com | (+91) 9535330160{" "}
+                revankardhiraj@yahoo.com | (+966) 534091995{" "}
               </li>
             </ul>
             {/* View Resume Button */}
             <a
-              href="https://drive.google.com/uc?export=download&id=1QuIVgRCOdJnUJmhDgE2RadACxlKKYQek"
+              href="https://drive.google.com/uc?export=download&id=1QfUddcOu8CkqPY_yASnuCaBqFRtEj_Jf"
               className={`inline-block px-4 mt-2 py-2 rounded-lg font-medium transition-colors ${
                 theme === "dark"
                   ? "bg-white text-black hover:bg-gray-300"
